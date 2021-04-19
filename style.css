@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
+:root {
+  --body--bg: rgb(7, 7, 7);
+  --primary-color: #e97d6c;
+  --secondary-color: #db1d4b;
+  --white: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +22,7 @@ li {
 }
 
 body {
-  background: #132743;
+  background: var(--body--bg);
   font-family: "Poppins", sans-serif;
 
   display: flex;
@@ -31,7 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
+  color: var(--white);
 }
 
 #particles-js {
@@ -52,7 +59,7 @@ body {
 .container h2 {
   margin: 0;
   font-size: 20px;
-  color: #e97d6c;
+  color: var(--primary-color);
 }
 
 .container .subtitle {
@@ -85,14 +92,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-duration: 1ms linear;
 }
 
 .social-media-container svg {
-  color: #db1d4b;
+  color: var(--secondary-color);
 }
 
 .info-container {
-  background: #fff;
+  background: var(--white);
   width: 100%;
   height: 100%;
   border-radius: 50px 50px 0 0;
@@ -100,17 +108,50 @@ body {
   margin-top: 40px;
 }
 
+.focus-in-expand {
+  -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 .content {
   padding: 50px 30px 20px;
   width: 100%;
-  color: #e97d6c;
+  color: var(--primary-color);
   overflow: hidden;
   position: relative;
 }
 
 .secondary-content {
   visibility: hidden;
-  background: #fff;
+  background: var(--white);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -186,7 +227,7 @@ body {
   border: 1px solid #bcbcbc;
   border-radius: 50px;
   text-decoration: none;
-  color: #e97d6c;
+  color: var(--primary-color);
   cursor: pointer;
 
   -webkit-box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
@@ -195,9 +236,9 @@ body {
 }
 
 .link.highlight {
-  background: #e97d6c;
-  border: 1px solid #e97d6c;
-  color: #fff;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--white);
   font-weight: bold;
 }
 
@@ -214,10 +255,10 @@ form {
 
 .input {
   outline: none;
-  border: 2px solid #e97d6c;
+  border: 2px solid var(--primary-color);
   background: none;
   padding: 0.6rem 1.2rem;
-  color: #e97d6c;
+  color: var(--primary-color);
   font-weight: 500;
   font-size: 0.95rem;
   font-family: "Poppins", sans-serif;
@@ -243,10 +284,10 @@ textarea.input {
 
 .btn {
   padding: 0.6rem 1.3rem;
-  background-color: #e97d6c;
-  border: 2px solid #e97d6c;
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   font-size: 0.95rem;
-  color: #fff;
+  color: var(--white);
   line-height: 1;
   border-radius: 40px;
   outline: none;
@@ -256,8 +297,8 @@ textarea.input {
 }
 
 .btn:hover {
-  background-color: transparent;
-  color: #e97d6c;
+  background-color: var(--white);
+  color: var(--primary-color);
 }
 
 .input-container label {
@@ -266,7 +307,7 @@ textarea.input {
   left: 15px;
   transform: translateY(-50%);
   padding: 0 0.4rem;
-  color: #e97d6c;
+  color: var(--primary-color);
   font-size: 0.9rem;
   font-weight: 400;
   pointer-events: none;
@@ -298,7 +339,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #fff;
+  background-color: var(--white);
   top: 50%;
   transform: translateY(-50%);
 }
@@ -325,5 +366,5 @@ textarea.input {
 }
 
 #my-form-status {
-  color: #e97d6c;
+  color: var(--primary-color);
 }
