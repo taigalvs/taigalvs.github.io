@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Linktree - Tainá Galvão</title>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div class="container">
+      <img class="profile" src="./assets/profile.jpg" />
+
+      <h2>Tainá Galvão</h2>
+      <p class="subtitle">Front-end Developer</p>
+      <p>Acompanhe meus estudos 🚀</p>
+
+      <div class="info-container">
+        <div class="social-media-container">
+          <a href="https://github.com/taigalvs" target="_blank">
+            <i data-feather="github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/almeida-taina/" target="_blank">
+            <i data-feather="linkedin"></i
+          ></a>
+          <a href="https://wa.link/19wing" target="_blank"><i data-feather="send"></i></a>
+        </div>
+
+        <div class="content">
+            <div id="secondary-content" class="secondary-content">
+                <h3> <i id="go-back-button" data-feather="arrow-left"></i> Meu Setup</h3>
+                <a class="link" target="_blank" href="https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=93300">
+                     Cadeira Gamer Alpha Gamer Kappa
+                </a>
+                <a class="link">
+                    💻 Ryzen 1600, 16GB, SSD 240, GTX 1070
+                </a>
+                <a class="link" target="_blank" href="https://www.kabum.com.br/produto/99562/monitor-gamer-samsung-led-24-widescreen-full-hd-hdmi-vga-1ms-ls24d332hsxzd">
+                    📺 Monitor Samsung LS24D332HSXZD
+                </a>
+                <a class="link" target="_blank" href="https://www.amazon.com.br/Mouse-Game-Mec%C3%A2nico-Bot%C3%A3o-Retroiluminado/dp/B07TWYLYXM">
+                    🖱️ Mouse ONIKUMA CW60
+                </a>
+                <a class="link" target="_blank" href="https://www.kabum.com.br/produto/102770/headset-gamer-havit-drivers-53mm-hv-h2002d"> 
+                  🎧 Headset Havit H2002D
+              </a>
+            </div>
+        
+            <div class="main-content">
+              <p>Vídeo recomendado 👇🏼</p>
+              <div class="video-container">
+                <iframe 
+                width="560" height="315" src="https://www.youtube.com/embed/oUPaJxk6TZ0" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+              </div>
+              <a
+                href="https://willianjusten.com.br/como-se-tornar-um-desenvolvedor-front-end/" target="_blank"
+                class="link highlight"
+              >
+                ⭐️ Guia para o desenvolvedor Front-End
+              </a>
+              <a id="setup-button" class="link">
+                💻 Meu Setup
+              </a>
+              <h4 class="title">Entre em contato!</h4>
+              <form id="my-form" action="https://formspree.io/f/mwkapqaa" method="POST">
+                <input type="text" name="_gotcha" style="display:none" />
+              <div class="input-container">
+                <input type="text" name="name" class="input" />
+                <label for="">Nome</label>
+                <span>Nome</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input" />
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+              
+              <div class="input-container textarea">
+                <textarea name="message" class="input"></textarea>
+                <label for="">Mensagem</label>
+                <span>Mensagem</span>
+              </div>
+              <input type="submit" value="Enviar" class="btn" />
+              <p id="my-form-status"></p>
+            
+            </form>
+            </div>
+          </div>
+        </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+  </script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 1200,
+          density: { enable: true, value_area: 789.1476416322727 }
+        },
+        color: {
+          value: "#ffffff"
+        },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 },
+          image: { src: "img/github.svg", width: 100, height: 100 }
+        },
+        opacity: {
+          value: 0.48927153781200905,
+          random: false,
+          anim: { enable: true, speed: 0.2, opacity_min: 0, sync: false }
+        },
+        size: {
+          value: 2,
+          random: true,
+          anim: { enable: true, speed: 2, size_min: 0, sync: false }
+        },
+        line_linked: {
+          enable: false,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 0.2,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "bubble"
+          },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: {
+            distance: 83.91608391608392,
+            size: 1,
+            duration: 3,
+            opacity: 1,
+            speed: 3
+          },
+          repulse: { distance: 200, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+  <script>
+    const setupButton = document.getElementById("setup-button");
+    const goBackButton = document.getElementById("go-back-button");
+
+    setupButton.addEventListener("click", showContent);
+    goBackButton.addEventListener("click", hideContent);
+
+    function showContent() {
+      document.getElementById("secondary-content").classList.remove("hide");
+      document.getElementById("secondary-content").classList.add("show");
+    }
+
+    function hideContent() {
+      document.getElementById("secondary-content").classList.remove("show");
+      document.getElementById("secondary-content").classList.add("hide");
+    }
+
+    const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Recebi sua mensagem!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! Temos um problema, erro ao enviar."
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+
+  </script>
+</html>
