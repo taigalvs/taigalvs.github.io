@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
 :root {
-  --body--bg: #f7b0c4;
+  --body--bg: #db5498;
   --primary-color: #00022e;
   --secondary-color: #fd5956;
   --white: #fff;
@@ -408,7 +408,7 @@ textarea.input {
 }
 
 .slider {
-  background-color: var(--secondary-color);
+  background-color: var(--white);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -419,7 +419,7 @@ textarea.input {
 }
 
 .slider:before {
-  background-color: #fff;
+  background-color: #00022e;
   bottom: 4px;
   content: "";
   height: 19px;
